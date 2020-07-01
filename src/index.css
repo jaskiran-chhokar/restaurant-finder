@@ -13,5 +13,22 @@ code {
     monospace;
 }
 
+.display-grid {
+  display: grid; 
+  justify-content: center;
+}
+
+.container {
+  padding: 2.5rem 3rem; 
+}
+
+.restaurants-container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.restaurant-card {
+  padding: 2rem;
+}
+
 
 

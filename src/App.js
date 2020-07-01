@@ -17,17 +17,9 @@ class App extends Component {
 
   makeApiCall = (event) => {
     event.preventDefault();
-
     let stateCityInput = this.state.cityInput;
     let stateCities = this.state.cities;
-
     this.findCity(stateCityInput, stateCities);
-
-    // fetch api
-    // const url = 'https://opentable.herokuapp.com/api/cities';
-    // fetch(url)
-    //   .then((response) => response.json())
-    //   .then(data => console.log(data.cities));
   }
 
   componentDidMount = () => {
@@ -61,10 +53,14 @@ class App extends Component {
   render() {
 
     return (
-      <div>
-        <CityInput setInput={this.setCityInput} makeApiCall={this.makeApiCall} />,
-        <Restaurants restaurants={this.state.restaurants} />
-      </div>
+      <section>
+        <div className='container display-grid'>
+          <CityInput setInput={this.setCityInput} makeApiCall={this.makeApiCall} />
+        </div>
+        <div className='container'>
+          <Restaurants restaurants={this.state.restaurants} />
+        </div>
+      </section>
     )
   }
 }

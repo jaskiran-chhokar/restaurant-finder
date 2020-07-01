@@ -4,7 +4,7 @@ const Restaurants = ({ restaurants }) => {
 
     const rows = restaurants.map((restaurant, index) => {
         return (
-            <div key={index}>
+            <div className='restaurant-card' key={index}>
                 <h3>{restaurant.name}</h3>
                 <p>{restaurant.address}</p>
                 <p>{restaurant.price}</p>
@@ -12,7 +12,7 @@ const Restaurants = ({ restaurants }) => {
         );
     })
 
-    return <section>{rows}</section>
+    return <div className='restaurants-container display-grid'>{rows}</div>
 }
 
 export default Restaurants;
