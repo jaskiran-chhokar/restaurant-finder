@@ -55,10 +55,11 @@ body {
   text-align: center; 
 }
 
-.restaurant-form__input {
+.restaurant-form .restaurant-form__input {
   padding: 1rem; 
   width: 40%; 
-  border-radius: 5px; 
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   margin-right: 1rem;
   border: 3px solid var(--secondary-color);
   background-color: transparent;
@@ -66,15 +67,24 @@ body {
   font-size: 1rem; 
 }
 
-.restaurant-form__input::placeholder { 
+.restaurant-form .restaurant-form__input::placeholder { 
   font-size: 1rem; 
   color: var(--primary-color);
 }
 
-.restaurant-form__input:focus {
+.restaurant-form .restaurant-form__input:focus {
   outline: none; 
   border-color: var(--primary-color);
   background-color: rgba(116, 157, 121,0.05);
+}
+
+.restaurant-form .restaurants__city-label {
+  padding: 1.19rem 2rem;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 600; 
+  position: relative;
+  top: 1px;
 }
 
 .restaurant-form__button-contain {
@@ -163,12 +173,21 @@ body {
   border-bottom: 3px solid rgba(255,255,255,0.5);
 }
 
+.restaurants .restaurants__refine-label {
+  padding: 1rem 2rem;
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .restaurants .restaurants__refine-contain input { 
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   outline: none;
   width: 60%;
   border: none;
   color: white;
+  font-weight: 600;
   font-size: 1rem;
   border-radius: 5px;
   background-color: transparent;
@@ -189,7 +208,7 @@ body {
 }
 
 .credits .credits__link {
-  color: #3876f2;
+  color: #0167b7;
   font-weight: 600; 
 }
 

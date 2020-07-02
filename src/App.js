@@ -73,6 +73,7 @@ class App extends Component {
         </header>
         <section className="restaurant-form">
           <form onSubmit={this.makeApiCall}>
+            <label htmlFor="cityInput" className="restaurants__city-label">City</label>
             <CityInput setInput={this.setCityInput} />
             <div className="restaurant-form__button-contain">
               <button className="restaurant-form__button restaurant-form__button--disable" type="submit" name="submit">Search<span className="restaurant-form__search-icon fas fa-search"></span></button>
@@ -81,6 +82,7 @@ class App extends Component {
         </section>
         <section className="restaurants">
           <div className="restaurants__refine-contain">
+            <label htmlFor="refine" className="restaurants__refine-label">Refine Results</label>
             <RefineInput refineInput={this.setRefineInput} />
           </div>
           <Restaurants restaurants={this.state.restaurants} refineInput={this.state.refineInput} />
