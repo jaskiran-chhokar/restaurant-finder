@@ -16,3 +16,45 @@ If I had more time to work on this project, I definitely would have dedicated mo
 - Pagination (to better organize the restaurant cards) 
 - A Modal View (where users would be able to read more details about a specific restaurant) 
 - Return an error message if no cities are found
+
+### What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
+
+Chosen Language: JavaScript (ES6) 
+
+One of the most useful features I've come accross is [String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes), as it is a very simple way to determine whether one string (or part of a string) may be contained inside of another.
+
+The following code snippet is an example of how I used String.prototype.includes() to loop through an array of cities and compare it against what the user has typed in the input: 
+
+
+`
+
+
+
+  
+    cities.map(city => {
+    
+      if (city.toLowerCase().includes(cityInput.toLowerCase())) {
+      
+        fetch(`https://opentable.herokuapp.com/api/restaurants?city=${city}`)
+        
+          .then((response) => response.json())
+          
+          .then(data => {
+          
+            this.setState({
+            
+              restaurants: data.restaurants,
+              
+            })
+            
+          })
+          
+          .catch(error => console.error('Looks like something went wrong!', error));
+          
+      }
+      
+    });
+    
+  
+`
+
