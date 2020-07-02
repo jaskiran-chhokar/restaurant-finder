@@ -23,7 +23,7 @@ Chosen Language: JavaScript (ES6)
 
 One of the most useful features I've come accross is [String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes), as it is a very simple way to determine whether one string (or part of a string) may be contained inside of another.
 
-The following code snippet is an example of how I used String.prototype.includes() to loop through an array of cities and compare it against what the user has typed in the input: 
+**The following code snippet is an example of how I used String.prototype.includes() to loop through an array of cities and compare it against what the user has typed in the input: **
 
 
 ```
@@ -44,9 +44,7 @@ The following code snippet is an example of how I used String.prototype.includes
             })
             
           })
-          
           .catch(error => console.error('Looks like something went wrong!', error));
-          
       }
       
     });
