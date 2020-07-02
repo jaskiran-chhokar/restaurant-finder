@@ -70,7 +70,7 @@ I would improve the API by providing it with more information. For instance, hav
             "Designing", 
             "Drawing"
         ],
-        "personality characteristics": [
+        "personalityTraits": [
             "Motivated", 
             "Collaborative", 
             "Organized", 
