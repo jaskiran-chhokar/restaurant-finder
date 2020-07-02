@@ -26,11 +26,7 @@ One of the most useful features I've come accross is [String.prototype.includes(
 The following code snippet is an example of how I used String.prototype.includes() to loop through an array of cities and compare it against what the user has typed in the input: 
 
 
-`
-
-
-
-  
+```
     cities.map(city => {
     
       if (city.toLowerCase().includes(cityInput.toLowerCase())) {
@@ -54,7 +50,5 @@ The following code snippet is an example of how I used String.prototype.includes
       }
       
     });
-    
-  
-`
+```
 
