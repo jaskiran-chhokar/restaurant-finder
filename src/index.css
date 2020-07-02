@@ -86,8 +86,7 @@ body {
   background-color: var(--secondary-color);
   color: white;
   font-weight: 600; 
-  position: relative;
-  top: 1px;
+  margin-right: 0.5rem;
 }
 
 .restaurant-form__button-contain {
