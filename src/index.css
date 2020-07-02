@@ -61,6 +61,7 @@ body {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-right: 1rem;
+  margin-bottom: 1rem;
   border: 3px solid var(--secondary-color);
   background-color: transparent;
   transition: 0.5s ease-in-out;
@@ -133,7 +134,7 @@ body {
 
 .restaurants__card:hover {
   transform: scale(0.95);
-  background-color: rgba(233,231,219,0.4);
+  background-color: var(--background-color);
 }
 
 .restaurants__card .restaurants__title, 
@@ -223,6 +224,9 @@ body {
   .restaurants__container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .restaurants .restaurants__refine-contain input {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -233,13 +237,48 @@ body {
   .restaurant-form .restaurant-form__input {
     width: 70%;
   }
-  .restaurant-form .restaurant-form__button-contain {
-    margin-top: 1rem;
-  }
   .header .header__title {
     font-size: 3rem;
   }
   .header .header__subtitle {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) { 
+  .restaurant-form .restaurant-form__input {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 465px) { 
+  .container {
+    padding: 2.5rem 1.5rem;
+  }
+  .header .header__title {
+    font-size: 2.8rem;
+  }
+  .restaurants .restaurants__container {
+    padding: 2rem 0.5rem;
+  }
+  .restaurants .restaurants__refine-label {
+    padding: 1rem;
+  }
+  .restaurants .restaurants__refine-contain input {
+    width: 80%;
+    padding: 1rem;
+  }
+  .restaurants .restaurants__refine-label {
+    display: inherit;
+  }
+  .restaurant-form {
+    text-align: left;
+  }
+  .restaurant-form .restaurants__city-label {
+    display: inline-block;
+    padding: 0.95rem 2rem;
+  }
+  .restaurant-form .restaurant-form__input {
+    width: 85%;
   }
 }
