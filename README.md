@@ -58,5 +58,28 @@ One thing in particular that I like about tracking performance in Chrome Dev Too
 
 I would improve the API by providing it with more information. For instance, having values for ratings, a menu, or contact information would be very useful. 
 
+### Please describe yourself using JSON.
 
+```
+    {
+        "name": "Jaskiran", 
+        "lastName": "Chhokar", 
+        "hobbies": [ 
+            "Hiking", 
+            "Programming", 
+            "Designing", 
+            "Drawing"
+        ],
+        "personality characteristics": [
+            "Motivated", 
+            "Collaborative", 
+            "Organized", 
+            "Analytic"
+        ], 
+        "favSnacks": [
+            "Cupcakes", 
+            "Ice Cream",
+        ],
+    }
+```
 
