@@ -10,7 +10,7 @@ Used [Open Table's Public API](https://opentable.herokuapp.com/) to develop a Re
 
 I spent approximately 18 hours working on this coding assignment. During the creation of this project, I really wanted to emphasize my understanding of React, writing accessible code, and CSS abilties. 
 
-If I had more time to work on this project, I definitely would have dedicated more time towards learning Redux (in order to manage the state of my application in an efficient manner), and also utilize either Jest/React Testing Library to test my code.
+If I had more time to work on this project, I definitely would have dedicated more time towards learning Redux (in order to manage the state of my application in an efficient manner), and also utilize either Jest/React Testing Library to test my code. I don't have much experience with the two, but am very interested in learning about them! 
 
 **Features I Would Love to Add:**
 - Pagination (to better organize the restaurant cards) 
