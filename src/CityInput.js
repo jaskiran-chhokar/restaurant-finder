@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 
-const CityInput = ({ setInput, makeApiCall }) => {
+const CityInput = ({ setInput }) => {
 
     return (
-        <form onSubmit={makeApiCall}>
-            <input type="text" name="city" onChange={setInput} />
-            <input type="submit" name="submit" />
-        </form>
+        <input type="text" name="city" placeholder='City Name' onChange={setInput} />
     )
 }
 

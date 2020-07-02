@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CityInput from './CityInput';
 import Restaurants from './Restaurants';
-// import Restaurant from './Restaurant';
+import RefineInput from './RefineInput'
 
 class App extends Component {
   state = {
@@ -13,6 +13,10 @@ class App extends Component {
 
   setCityInput = (event) => {
     this.setState({ cityInput: event.target.value })
+  }
+
+  setRefineInput = (event) => {
+    this.setState({ refineInput: event.target.value })
   }
 
   makeApiCall = (event) => {
@@ -33,12 +37,9 @@ class App extends Component {
       });
   }
 
-  findCity = (input, cities) => {
+  findCity = (cityInput, cities) => {
     cities.map(city => {
-      if (city.toLowerCase().includes(input.toLowerCase())) {
-        console.log(`Input Value: ${input}`);
-        console.log(`City Returned:  ${city}`);
-
+      if (city.toLowerCase().includes(cityInput.toLowerCase())) {
         fetch(`https://opentable.herokuapp.com/api/restaurants?city=${city}`)
           .then((response) => response.json())
           .then(data => {
@@ -55,10 +56,14 @@ class App extends Component {
     return (
       <section>
         <div className='container display-grid'>
-          <CityInput setInput={this.setCityInput} makeApiCall={this.makeApiCall} />
+          <form onSubmit={this.makeApiCall}>
+            <CityInput setInput={this.setCityInput} />
+            <input type="submit" name="submit" />
+          </form>
+          <RefineInput refineInput={this.setRefineInput} />
         </div>
         <div className='container'>
-          <Restaurants restaurants={this.state.restaurants} />
+          <Restaurants restaurants={this.state.restaurants} refineInput={this.state.refineInput} />
         </div>
       </section>
     )
