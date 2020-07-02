@@ -59,6 +59,7 @@ class App extends Component {
           })
           .catch(error => console.error('Looks like something went wrong!', error));
       }
+      return true;
     });
   }
 

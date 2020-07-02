@@ -12,6 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   background-color: var(--background-color);
 }
 
@@ -159,7 +161,7 @@ body {
 }
 
 .restaurants__card .restaurants__button {
-  -webkit-appearance: button;
+  display: block;
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary-color);

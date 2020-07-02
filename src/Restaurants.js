@@ -11,6 +11,7 @@ const Restaurants = ({ restaurants, refineInput }) => {
             if (restaurant.name.toLowerCase().includes(refineInput.toLowerCase()) || restaurant.address.toLowerCase().includes(refineInput.toLowerCase())) {
                 return true;
             }
+            return false;
         });
 
         rows = refine.map((restaurant) => {
