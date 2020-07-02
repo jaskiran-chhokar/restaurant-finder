@@ -12,18 +12,26 @@ class App extends Component {
   }
 
   setCityInput = (event) => {
+    // Disable Submit Button When Input is Empty
+    if (event.target.value !== '') {
+      document.querySelector('.restaurant-form__button').classList.remove('restaurant-form__button--disable');
+    }
+    if (event.target.value === '') {
+      document.querySelector('.restaurant-form__button').classList.add('restaurant-form__button--disable');
+    }
+    // Set State for City Input
     this.setState({ cityInput: event.target.value })
   }
 
   setRefineInput = (event) => {
+    // Set State for Refine Input
     this.setState({ refineInput: event.target.value })
   }
 
   makeApiCall = (event) => {
     event.preventDefault();
-    let stateCityInput = this.state.cityInput;
-    let stateCities = this.state.cities;
-    this.findCity(stateCityInput, stateCities);
+    const { cityInput, cities } = this.state;
+    this.findCity(cityInput, cities);
   }
 
   componentDidMount = () => {
@@ -34,9 +42,11 @@ class App extends Component {
         this.setState({
           cities: data.cities,
         })
-      });
+      })
+      .catch(error => console.error('Looks like something went wrong!', error));
   }
 
+  // Find Match For City Based on User Input
   findCity = (cityInput, cities) => {
     cities.map(city => {
       if (city.toLowerCase().includes(cityInput.toLowerCase())) {
@@ -47,25 +57,38 @@ class App extends Component {
               restaurants: data.restaurants,
             })
           })
+          .catch(error => console.error('Looks like something went wrong!', error));
       }
     });
   }
 
   render() {
-
     return (
-      <section>
-        <div className='container display-grid'>
+      <div className="container">
+        <header className="header">
+          <div className="header__container">
+            <h1 className="header__title"><span className="header__icon fas fa-utensils"></span>Restaurant Finder</h1>
+            <h2 className="header__subtitle">Find the best restaurants in your current city!</h2>
+          </div>
+        </header>
+        <section className="restaurant-form">
           <form onSubmit={this.makeApiCall}>
             <CityInput setInput={this.setCityInput} />
-            <input type="submit" name="submit" />
+            <div className="restaurant-form__button-contain">
+              <button className="restaurant-form__button restaurant-form__button--disable" type="submit" name="submit">Search<span className="restaurant-form__search-icon fas fa-search"></span></button>
+            </div>
           </form>
-          <RefineInput refineInput={this.setRefineInput} />
-        </div>
-        <div className='container'>
+        </section>
+        <section className="restaurants">
+          <div className="restaurants__refine-contain">
+            <RefineInput refineInput={this.setRefineInput} />
+          </div>
           <Restaurants restaurants={this.state.restaurants} refineInput={this.state.refineInput} />
-        </div>
-      </section>
+        </section>
+        <footer className="credits">
+          <p className="credits__content">API Data Retrieved from <a className="credits__link" href="https://opentable.herokuapp.com/" target="_blank" rel="noopener noreferrer">OpenTable API</a></p>
+        </footer>
+      </div>
     )
   }
 }

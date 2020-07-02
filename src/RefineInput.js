@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const RefineInput = ({ refineInput }) => {
-
     return (
-        <input type="text" name="refine" placeholder='Refine Results' onChange={refineInput} />
+        <input type="text" name="refine" placeholder="Type here to refine results..." onChange={refineInput} />
     )
 }
 
