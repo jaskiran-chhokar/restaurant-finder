@@ -19,11 +19,9 @@ If I had more time to work on this project, I definitely would have dedicated mo
 
 ### What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
-Chosen Language: JavaScript (ES6) 
-
 One of the most useful features I've come accross is [String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes), as it is a very simple way to determine whether one string (or part of a string) may be contained inside of another.
 
-**The following code snippet is an example of how I used String.prototype.includes() to loop through an array of cities and compare it against what the user has typed in the input: **
+**The following code snippet is an example of how I used String.prototype.includes() to loop through an array of cities and compare it against what the user has typed in the input:**
 
 
 ```
@@ -49,4 +47,16 @@ One of the most useful features I've come accross is [String.prototype.includes(
       
     });
 ```
+
+### How would you track down a performance issue in production? Have you ever had to do this?
+
+In order to track down a performance issue in production, I would definitely utilize the Performance tab in Chrome Dev Tools. Analyzing runtime performance through Chrome Dev Tools allows for the devleoper to analyze specific responses, as well as idle phases. The way I would go about tracking performance is by running a recording of the performance panel. As a result, while the page is running, Chrome Dev Tools can capture specific performance metrics. 
+
+One thing in particular that I like about tracking performance in Chrome Dev Tools, is the ability to simulate a mobile CPU. Mobile CPU's are oftentimes much slower than a regular computer, so it's great to be able to simulate that. 
+
+### How would you improve the API that you just used?
+
+I would improve the API by providing it with more information. For instance, having values for ratings, a menu, or contact information would be very useful. 
+
+
 
