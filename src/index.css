@@ -1,6 +1,7 @@
 :root {
   --primary-color: #0c214a; 
   --secondary-color: #749d79;
+  --background-color: #e9f1f4;
 }
 
 body {
@@ -11,8 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background-color: #f7efee;
-  background-color: rgba(233,231,219,0.3);
+  background-color: var(--background-color);
 }
 
 .container {
